@@ -1,0 +1,240 @@
+local_metadata.host.ip,local_metadata.host.name,local_metadata.os.full
+10.1.213.42/24,large-01-pc-148,macOS 15
+10.1.142.48/24,large-01-pc-169,Windows 11 Enterprise
+10.1.197.12/24,large-01-server-009,Windows Server 2022
+"10.1.213.61/24, 10.1.197.56/24",large-01-router-232,Network appliance OS
+10.1.77.29/24,large-01-pc-090,Windows 11 Enterprise
+10.1.161.52/24,large-01-pc-177,Windows 11 Enterprise
+"10.1.197.11/24, 127.0.0.1/8",large-01-pc-008,Ubuntu 24.04 LTS
+10.1.142.11/24,large-01-server-005,Windows Server 2022
+10.1.213.47/24,large-01-pc-168,Windows 11 Enterprise
+10.1.197.43/24,large-01-server-193,Debian GNU/Linux 12
+"10.1.161.38/24, 2001:db8:1:a1::77/64",large-01-pc-119,macOS 15
+"10.1.142.56/24, 10.1.77.62/24",large-01-server-215,Windows Server 2022
+10.1.77.60/24,large-01-server-200,Windows Server 2022
+10.1.197.37/24,large-01-server-155,Rocky Linux 9
+10.1.213.54/24,large-01-pc-202,macOS 15
+10.1.161.48/24,large-01-server-163,Ubuntu 24.04 LTS
+10.1.161.45/24,large-01-pc-147,Windows 11 Enterprise
+10.1.197.18/24,large-01-pc-035,Ubuntu 24.04 LTS
+10.1.161.42/24,large-01-pc-142,Ubuntu 24.04 LTS
+10.1.197.39/24,large-01-pc-172,Windows 11 Enterprise
+10.1.77.24/24,large-01-pc-078,macOS 15
+10.1.213.32/24,large-01-pc-104,macOS 15
+10.1.161.12/24,large-01-pc-017,Ubuntu 24.04 LTS
+10.1.142.42/24,large-01-server-141,Ubuntu 24.04 LTS
+10.1.197.33/24,large-01-server-131,Debian GNU/Linux 12
+10.1.77.64/24,large-01-pc-225,macOS 15
+"10.1.161.19/24, 10.1.197.20/24, 2001:db8:1:a1::29/64",large-01-server-041,Rocky Linux 9
+10.1.197.48/24,large-01-pc-207,macOS 15
+10.1.213.39/24,large-01-pc-137,macOS 15
+10.1.161.10/24,large-01-pc-006,macOS 15
+10.1.161.29/24,large-01-router-088,Debian GNU/Linux 12
+"10.1.161.23/24, 2001:db8:1:a1::3d/64",large-01-pc-061,Ubuntu 24.04 LTS
+10.1.161.35/24,large-01-pc-108,macOS 15
+"10.1.77.42/24, 2001:db8:1:4d::98/64",large-01-pc-152,Ubuntu 24.04 LTS
+"10.1.197.57/24, 127.0.0.1/8",large-01-pc-238,macOS 15
+10.1.142.12/24,large-01-switch-007,Network appliance OS
+10.1.161.33/24,large-01-pc-096,macOS 15
+"10.1.142.24/24, 127.0.0.1/8",large-01-server-066,Debian GNU/Linux 12
+"10.1.213.34/24, 10.1.197.30/24",large-01-server-106,Debian GNU/Linux 12
+10.1.197.24/24,large-01-pc-052,Ubuntu 24.04 LTS
+10.1.77.17/24,large-01-pc-053,Windows 11 Enterprise
+10.1.77.16/24,large-01-server-048,Windows Server 2022
+10.1.77.22/24,large-01-pc-065,macOS 15
+"10.1.142.50/24, 10.1.161.53/24, 127.0.0.1/8",large-01-server-179,Windows Server 2022
+"10.1.77.20/24, 127.0.0.1/8",large-01-pc-063,Ubuntu 24.04 LTS
+10.1.213.23/24,large-01-pc-062,macOS 15
+10.1.197.25/24,large-01-pc-059,Windows 11 Enterprise
+"10.1.197.34/24, 2001:db8:1:c5::8b/64",large-01-pc-139,Ubuntu 24.04 LTS
+"10.1.142.29/24, 127.0.0.1/8",large-01-pc-082,Ubuntu 24.04 LTS
+10.1.77.53/24,large-01-pc-183,Ubuntu 24.04 LTS
+10.1.161.15/24,large-01-pc-023,macOS 15
+10.1.197.26/24,large-01-pc-072,macOS 15
+10.1.77.54/24,large-01-pc-185,Windows 11 Enterprise
+"10.1.142.34/24, 127.0.0.1/8",large-01-server-117,Rocky Linux 9
+10.1.161.24/24,large-01-pc-067,Ubuntu 24.04 LTS
+10.1.142.31/24,large-01-server-103,Ubuntu 24.04 LTS
+"10.1.77.55/24, 2001:db8:1:4d::ba/64",large-01-pc-186,Ubuntu 24.04 LTS
+10.1.213.52/24,large-01-pc-196,Windows 11 Enterprise
+10.1.161.39/24,large-01-server-125,Debian GNU/Linux 12
+10.1.197.46/24,large-01-firewall-203,Debian GNU/Linux 12
+"10.1.142.47/24, 2001:db8:1:8e::a5/64",large-01-pc-165,Windows 11 Enterprise
+"10.1.213.36/24, 2001:db8:1:d5::6f/64, 127.0.0.1/8",large-01-pc-111,Windows 11 Enterprise
+10.1.142.21/24,large-01-pc-043,Windows 11 Enterprise
+"10.1.161.59/24, 127.0.0.1/8",large-01-pc-223,Windows 11 Enterprise
+"10.1.197.53/24, 127.0.0.1/8",large-01-pc-224,Ubuntu 24.04 LTS
+"10.1.161.46/24, 127.0.0.1/8",large-01-server-151,Windows Server 2022
+10.1.161.57/24,large-01-pc-214,Windows 11 Enterprise
+"10.1.77.10/24, 2001:db8:1:4d::4/64",large-01-pc-004,macOS 15
+10.1.77.23/24,large-01-pc-069,Windows 11 Enterprise
+10.1.142.49/24,large-01-pc-174,macOS 15
+10.1.213.55/24,large-01-pc-209,Ubuntu 24.04 LTS
+"10.1.197.45/24, 10.1.142.52/24",large-01-server-198,Ubuntu 24.04 LTS
+"10.1.213.27/24, 2001:db8:1:d5::5c/64",large-01-pc-092,macOS 15
+"10.1.142.46/24, 2001:db8:1:8e::9c/64",large-01-pc-156,macOS 15
+10.1.142.60/24,large-01-pc-229,macOS 15
+10.1.142.38/24,large-01-pc-128,Windows 11 Enterprise
+"10.1.197.49/24, 2001:db8:1:c5::d0/64",large-01-pc-208,macOS 15
+10.1.77.43/24,large-01-pc-154,Ubuntu 24.04 LTS
+10.1.197.44/24,large-01-server-195,Rocky Linux 9
+"10.1.77.12/24, 10.1.197.15/24",large-01-server-025,Rocky Linux 9
+10.1.213.21/24,large-01-pc-050,macOS 15
+"10.1.161.28/24, 2001:db8:1:a1::51/64",large-01-pc-081,Ubuntu 24.04 LTS
+"10.1.77.31/24, 2001:db8:1:4d::63/64",large-01-server-099,Rocky Linux 9
+10.1.161.27/24,large-01-pc-080,Ubuntu 24.04 LTS
+"10.1.213.30/24, 10.1.161.34/24",large-01-server-098,Debian GNU/Linux 12
+10.1.142.41/24,large-01-pc-140,Ubuntu 24.04 LTS
+10.1.77.26/24,large-01-pc-084,Windows 11 Enterprise
+10.1.142.58/24,large-01-pc-220,macOS 15
+"10.1.142.33/24, 127.0.0.1/8",large-01-pc-114,macOS 15
+10.1.161.62/24,large-01-server-239,Windows Server 2022
+10.1.213.24/24,large-01-server-068,Rocky Linux 9
+10.1.197.42/24,large-01-pc-191,Ubuntu 24.04 LTS
+10.1.142.13/24,large-01-server-011,Windows Server 2022
+10.1.77.21/24,large-01-pc-064,macOS 15
+"10.1.77.58/24, 2001:db8:1:4d::c0/64",large-01-pc-192,macOS 15
+"10.1.197.21/24, 2001:db8:1:c5::2c/64",large-01-pc-044,Ubuntu 24.04 LTS
+10.1.142.53/24,large-01-pc-199,Ubuntu 24.04 LTS
+10.1.142.17/24,large-01-pc-031,Windows 11 Enterprise
+10.1.161.21/24,large-01-server-056,Rocky Linux 9
+"10.1.197.52/24, 127.0.0.1/8",large-01-server-221,Windows Server 2022
+"10.1.142.36/24, 2001:db8:1:8e::7e/64",large-01-pc-126,macOS 15
+10.1.161.26/24,large-01-switch-079,Network appliance OS
+10.1.213.25/24,large-01-server-074,Debian GNU/Linux 12
+"10.1.197.32/24, 2001:db8:1:c5::6e/64, 127.0.0.1/8",large-01-pc-110,macOS 15
+"10.1.142.40/24, 2001:db8:1:8e::87/64",large-01-pc-135,macOS 15
+"10.1.197.31/24, 2001:db8:1:c5::6d/64",large-01-server-109,Windows Server 2022
+10.1.213.12/24,large-01-pc-015,Windows 11 Enterprise
+10.1.77.25/24,large-01-pc-083,Windows 11 Enterprise
+"10.1.161.61/24, 127.0.0.1/8",large-01-server-233,Debian GNU/Linux 12
+10.1.77.45/24,large-01-pc-158,Windows 11 Enterprise
+10.1.77.28/24,large-01-pc-087,Ubuntu 24.04 LTS
+10.1.213.26/24,large-01-pc-075,Ubuntu 24.04 LTS
+10.1.77.34/24,large-01-pc-113,Windows 11 Enterprise
+10.1.213.43/24,large-01-pc-153,macOS 15
+"10.1.77.38/24, 127.0.0.1/8",large-01-pc-129,Windows 11 Enterprise
+10.1.142.30/24,large-01-pc-101,Ubuntu 24.04 LTS
+"10.1.77.48/24, 2001:db8:1:4d::ab/64",large-01-server-171,Ubuntu 24.04 LTS
+10.1.197.23/24,large-01-pc-047,macOS 15
+10.1.161.54/24,large-01-pc-184,Ubuntu 24.04 LTS
+10.1.213.59/24,large-01-pc-226,Windows 11 Enterprise
+"10.1.213.38/24, 2001:db8:1:d5::7b/64",large-01-pc-123,Windows 11 Enterprise
+"10.1.213.33/24, 127.0.0.1/8",large-01-router-105,Network appliance OS
+10.1.161.47/24,large-01-pc-162,Ubuntu 24.04 LTS
+"10.1.161.60/24, 2001:db8:1:a1::e4/64",large-01-pc-228,macOS 15
+10.1.142.43/24,large-01-pc-143,Windows 11 Enterprise
+10.1.142.27/24,large-01-pc-076,macOS 15
+10.1.197.22/24,large-01-firewall-045,Debian GNU/Linux 12
+"10.1.213.45/24, 2001:db8:1:d5::a1/64",large-01-server-161,Debian GNU/Linux 12
+"10.1.142.55/24, 10.1.213.57/24, 127.0.0.1/8",large-01-server-213,Windows Server 2022
+"10.1.213.60/24, 2001:db8:1:d5::e3/64",large-01-pc-227,macOS 15
+10.1.161.40/24,large-01-server-134,Rocky Linux 9
+"10.1.213.56/24, 2001:db8:1:d5::d2/64",large-01-pc-210,Ubuntu 24.04 LTS
+10.1.197.27/24,large-01-pc-085,Ubuntu 24.04 LTS
+10.1.213.18/24,large-01-server-034,Windows Server 2022
+"10.1.77.57/24, 10.1.142.51/24",large-01-server-189,Debian GNU/Linux 12
+"10.1.161.31/24, 10.1.77.30/24",large-01-server-094,Ubuntu 24.04 LTS
+10.1.77.15/24,large-01-pc-046,Windows 11 Enterprise
+"10.1.161.16/24, 2001:db8:1:a1::18/64",large-01-pc-024,Windows 11 Enterprise
+"10.1.142.39/24, 2001:db8:1:8e::85/64",large-01-pc-133,Ubuntu 24.04 LTS
+"10.1.197.36/24, 127.0.0.1/8",large-01-pc-145,Windows 11 Enterprise
+10.1.213.58/24,large-01-pc-217,Ubuntu 24.04 LTS
+"10.1.77.36/24, 127.0.0.1/8",large-01-pc-121,Windows 11 Enterprise
+"10.1.77.18/24, 2001:db8:1:4d::39/64",large-01-server-057,Debian GNU/Linux 12
+10.1.142.20/24,large-01-pc-039,Ubuntu 24.04 LTS
+"10.1.142.18/24, 10.1.213.17/24",large-01-server-033,Debian GNU/Linux 12
+10.1.161.22/24,large-01-pc-060,Windows 11 Enterprise
+10.1.197.28/24,large-01-pc-091,Ubuntu 24.04 LTS
+10.1.161.56/24,large-01-pc-204,Windows 11 Enterprise
+"10.1.213.35/24, 10.1.77.33/24, 2001:db8:1:d5::6b/64",large-01-server-107,Rocky Linux 9
+10.1.197.40/24,large-01-pc-176,macOS 15
+10.1.77.51/24,large-01-pc-178,macOS 15
+10.1.77.27/24,large-01-pc-086,macOS 15
+10.1.213.20/24,large-01-server-042,Windows Server 2022
+10.1.77.37/24,large-01-pc-122,Ubuntu 24.04 LTS
+10.1.197.17/24,large-01-pc-032,Windows 11 Enterprise
+10.1.213.10/24,large-01-server-002,Ubuntu 24.04 LTS
+"10.1.77.11/24, 127.0.0.1/8",large-01-pc-021,macOS 15
+"10.1.197.35/24, 10.1.161.43/24, 10.1.213.41/24",large-01-router-144,Network appliance OS
+"10.1.142.61/24, 2001:db8:1:8e::eb/64",large-01-server-235,Windows Server 2022
+10.1.213.50/24,large-01-pc-188,Windows 11 Enterprise
+"10.1.142.32/24, 127.0.0.1/8",large-01-pc-112,Ubuntu 24.04 LTS
+10.1.142.62/24,large-01-pc-236,macOS 15
+10.1.142.45/24,large-01-server-150,Rocky Linux 9
+"10.1.142.26/24, 2001:db8:1:8e::47/64, 127.0.0.1/8",large-01-server-071,Windows Server 2022
+"10.1.213.51/24, 127.0.0.1/8",large-01-pc-190,macOS 15
+"10.1.77.13/24, 10.1.213.14/24, 10.1.142.16/24, 2001:db8:1:4d::1a/64",large-01-firewall-026,Network appliance OS
+"10.1.213.22/24, 2001:db8:1:d5::36/64",large-01-pc-054,Ubuntu 24.04 LTS
+10.1.161.14/24,large-01-pc-019,Windows 11 Enterprise
+"10.1.197.19/24, 10.1.77.14/24",large-01-server-040,Windows Server 2022
+10.1.197.16/24,large-01-pc-027,macOS 15
+"10.1.161.55/24, 127.0.0.1/8",large-01-pc-197,Ubuntu 24.04 LTS
+"10.1.213.46/24, 10.1.161.49/24, 2001:db8:1:d5::a4/64, 127.0.0.1/8",large-01-server-164,Rocky Linux 9
+10.1.161.13/24,large-01-pc-018,Ubuntu 24.04 LTS
+10.1.213.15/24,large-01-pc-028,macOS 15
+"10.1.142.23/24, 127.0.0.1/8",large-01-server-051,Rocky Linux 9
+10.1.213.19/24,large-01-pc-038,macOS 15
+"10.1.213.28/24, 127.0.0.1/8",large-01-pc-093,Ubuntu 24.04 LTS
+10.1.161.50/24,large-01-server-166,Rocky Linux 9
+10.1.77.32/24,large-01-pc-102,Ubuntu 24.04 LTS
+"10.1.142.10/24, 127.0.0.1/8",large-01-server-003,Rocky Linux 9
+10.1.142.35/24,large-01-pc-124,Ubuntu 24.04 LTS
+"10.1.213.48/24, 10.1.77.52/24",large-01-server-181,Ubuntu 24.04 LTS
+10.1.161.36/24,large-01-pc-115,Ubuntu 24.04 LTS
+10.1.213.31/24,large-01-pc-100,Ubuntu 24.04 LTS
+"10.1.142.57/24, 2001:db8:1:8e::db/64",large-01-pc-219,Windows 11 Enterprise
+10.1.197.13/24,large-01-pc-010,Windows 11 Enterprise
+"10.1.161.30/24, 2001:db8:1:a1::59/64",large-01-pc-089,Windows 11 Enterprise
+"10.1.142.37/24, 2001:db8:1:8e::7f/64",large-01-pc-127,macOS 15
+10.1.77.44/24,large-01-pc-157,Windows 11 Enterprise
+10.1.142.15/24,large-01-pc-022,Windows 11 Enterprise
+10.1.142.54/24,large-01-server-206,Windows Server 2022
+10.1.77.46/24,large-01-pc-160,Ubuntu 24.04 LTS
+"10.1.161.44/24, 2001:db8:1:a1::92/64",large-01-server-146,Windows Server 2022
+10.1.213.29/24,large-01-pc-097,Ubuntu 24.04 LTS
+10.1.77.50/24,large-01-pc-175,Ubuntu 24.04 LTS
+"10.1.77.41/24, 10.1.213.40/24",large-01-server-138,Rocky Linux 9
+"10.1.197.38/24, 10.1.77.47/24, 2001:db8:1:c5::a7/64",large-01-server-167,Rocky Linux 9
+10.1.197.47/24,large-01-pc-205,macOS 15
+10.1.161.37/24,large-01-pc-118,Windows 11 Enterprise
+10.1.197.50/24,large-01-server-212,Ubuntu 24.04 LTS
+10.1.197.51/24,large-01-pc-218,Windows 11 Enterprise
+10.1.77.19/24,large-01-pc-058,macOS 15
+10.1.77.65/24,large-01-server-234,Debian GNU/Linux 12
+10.1.77.35/24,large-01-server-116,Ubuntu 24.04 LTS
+"10.1.142.59/24, 10.1.77.63/24",large-01-server-222,Ubuntu 24.04 LTS
+10.1.197.10/24,large-01-pc-001,macOS 15
+10.1.77.39/24,large-01-server-130,Debian GNU/Linux 12
+10.1.197.14/24,large-01-pc-013,Ubuntu 24.04 LTS
+"10.1.213.62/24, 10.1.77.66/24",large-01-server-237,Ubuntu 24.04 LTS
+"10.1.142.22/24, 2001:db8:1:8e::31/64",large-01-pc-049,macOS 15
+10.1.77.40/24,large-01-pc-132,Windows 11 Enterprise
+10.1.77.49/24,large-01-pc-173,Ubuntu 24.04 LTS
+"10.1.213.16/24, 127.0.0.1/8",large-01-pc-030,Ubuntu 24.04 LTS
+"10.1.161.20/24, 2001:db8:1:a1::37/64, 127.0.0.1/8",large-01-pc-055,macOS 15
+10.1.197.41/24,large-01-pc-180,Ubuntu 24.04 LTS
+10.1.161.11/24,large-01-pc-014,Ubuntu 24.04 LTS
+"10.1.213.49/24, 2001:db8:1:d5::b6/64",large-01-pc-182,Windows 11 Enterprise
+10.1.161.25/24,large-01-server-073,Windows Server 2022
+10.1.142.25/24,large-01-pc-070,Windows 11 Enterprise
+"10.1.197.29/24, 10.1.161.32/24",large-01-server-095,Ubuntu 24.04 LTS
+"10.1.161.18/24, 2001:db8:1:a1::24/64",large-01-pc-036,macOS 15
+10.1.161.17/24,large-01-pc-029,macOS 15
+10.1.197.54/24,large-01-pc-230,Ubuntu 24.04 LTS
+10.1.161.51/24,large-01-server-170,Rocky Linux 9
+"10.1.161.58/24, 2001:db8:1:a1::d8/64",large-01-pc-216,Ubuntu 24.04 LTS
+10.1.142.14/24,large-01-switch-016,Network appliance OS
+10.1.142.28/24,large-01-pc-077,macOS 15
+10.1.142.44/24,large-01-pc-149,Windows 11 Enterprise
+"10.1.197.55/24, 127.0.0.1/8",large-01-server-231,Debian GNU/Linux 12
+10.1.161.41/24,large-01-pc-136,Windows 11 Enterprise
+"10.1.77.56/24, 2001:db8:1:4d::bb/64, 127.0.0.1/8",large-01-server-187,Windows Server 2022
+"10.1.213.13/24, 2001:db8:1:d5::14/64",large-01-pc-020,Ubuntu 24.04 LTS
+10.1.213.53/24,large-01-server-201,Debian GNU/Linux 12
+"10.1.142.19/24, 2001:db8:1:8e::25/64, 127.0.0.1/8",large-01-pc-037,Ubuntu 24.04 LTS
+10.1.213.11/24,large-01-pc-012,macOS 15
+10.1.213.37/24,large-01-pc-120,macOS 15
+10.1.77.61/24,large-01-pc-211,Windows 11 Enterprise
+10.1.77.59/24,large-01-pc-194,Ubuntu 24.04 LTS
+"10.1.213.44/24, 2001:db8:1:d5::9f/64",large-01-pc-159,Ubuntu 24.04 LTS

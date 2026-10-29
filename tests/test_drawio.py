@@ -9,11 +9,38 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from urllib.parse import unquote
 
-from tyler_netmap.cli import main
-from tyler_netmap.drawio import HOST_FIELD, IP_FIELD, OS_FIELD, export_drawio, read_nodes
+from elastic_netmap_gen.cli import main
+from elastic_netmap_gen.drawio import _hierarchy, _layout, export_drawio
+from elastic_netmap_gen.configuration import DeviceSettings
+from elastic_netmap_gen.inventory import Node
+from elastic_netmap_gen.inventory import HOST_FIELD, IP_FIELD, OS_FIELD, read_nodes
+from elastic_netmap_gen.vlan import build_rules
 
 
 class DrawioTests(unittest.TestCase):
+    def test_router_core_stays_centered_with_unbalanced_vlan_groups(self) -> None:
+        for router_count, vlan_count in ((1, 0), (1, 1), (1, 6), (3, 5)):
+            with self.subTest(routers=router_count, vlans=vlan_count):
+                nodes = [Node(f"router-{index}", ["10.0.0.1/24"], ["Linux"])
+                         for index in range(router_count)]
+                devices = {node.hostname: DeviceSettings("router") for node in nodes}
+                for vlan in range(1, vlan_count + 1):
+                    nodes.extend(Node(f"host-{vlan}-{index}", [f"10.0.{vlan}.{index + 1}/24"], ["Linux"])
+                                 for index in range(vlan * 3))
+                box = _hierarchy(nodes, build_rules(["10.0.0.0/16"], []), devices)
+                _layout(box, top=True)
+                routers = [child for child in box.children if child.is_host]
+                self.assertAlmostEqual(sum(router.x + router.width / 2 for router in routers) / len(routers), box.width / 2, delta=1)
+                self.assertAlmostEqual(sum(router.y + router.height / 2 for router in routers) / len(routers), box.height / 2, delta=1)
+                for index, child in enumerate(box.children):
+                    self.assertGreaterEqual(child.x, 0)
+                    self.assertGreaterEqual(child.y, 110)
+                    self.assertLessEqual(child.x + child.width, box.width)
+                    self.assertLessEqual(child.y + child.height, box.height)
+                    for other in box.children[index + 1:]:
+                        self.assertTrue(child.x + child.width <= other.x or other.x + other.width <= child.x
+                                        or child.y + child.height <= other.y or other.y + other.height <= child.y)
+
     def setUp(self) -> None:
         self.directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.directory.cleanup)
@@ -43,9 +70,9 @@ class DrawioTests(unittest.TestCase):
                       "192.168.1.2/24", "Windows & Linux"):
             self.assertIn(value, label)
         self.assertEqual(label.count("10.1.0.1/24"), 1)
-        self.assertTrue(document.findall(".//mxCell[@edge='1']"))
+        self.assertFalse(document.findall(".//mxCell[@edge='1']"))
 
-    def test_packet_tracer_icons_and_illustrative_cables(self) -> None:
+    def test_inventory_icons_without_illustrative_devices_or_cables(self) -> None:
         self.write_csv([
             ["10.1.0.1/24", "workstation", "Windows 10"],
             ["10.1.0.2/24", "application", "Windows Server 2022"],
@@ -58,7 +85,8 @@ class DrawioTests(unittest.TestCase):
         devices = [cell for cell in cells if cell.get("id", "").startswith("device-")]
         edges = document.findall(".//mxCell[@edge='1']")
         self.assertEqual(len(hosts), 2)
-        self.assertEqual(len(edges), len(devices) - 1)
+        self.assertEqual(len(devices), len(hosts))
+        self.assertEqual(edges, [])
         for device in devices:
             style = device.get("style")
             self.assertIn("shape=image;", style)
@@ -72,7 +100,7 @@ class DrawioTests(unittest.TestCase):
             self.assertTrue(edge.get("source").startswith("device-"))
             self.assertTrue(edge.get("target").startswith("device-"))
             self.assertIn("endArrow=none", edge.get("style"))
-        self.assertIn("VISUAL ONLY", by_id["topology-legend"].get("value"))
+        self.assertIn("user-declared", by_id["topology-legend"].get("value"))
         self.assertIn("not discovered", by_id["topology-legend"].get("value"))
         # Workstation and server use distinct endpoint illustrations.
         endpoint_icons = [device for device in devices
@@ -95,10 +123,17 @@ class DrawioTests(unittest.TestCase):
         for host in hosts:
             parts = children[host.get("id")]
             heading = next(cell for cell in parts if cell.get("id").startswith("hostname-"))
+            addresses = next(cell for cell in parts if cell.get("id").startswith("addresses-"))
             icon = next(cell for cell in parts if cell.get("id").startswith("device-"))
             details = next(cell for cell in parts if cell.get("id").startswith("details-"))
             heading_geo, icon_geo, details_geo = (
                 cell.find("mxGeometry") for cell in (heading, icon, details))
+            address_geo = addresses.find("mxGeometry")
+            self.assertEqual(int(heading_geo.get("y")) + int(heading_geo.get("height")),
+                             int(address_geo.get("y")))
+            self.assertLessEqual(int(address_geo.get("y")) + int(address_geo.get("height")),
+                                 int(icon_geo.get("y")))
+            self.assertIn("/24", addresses.get("value"))
             self.assertLessEqual(int(heading_geo.get("y")) + int(heading_geo.get("height")),
                                  int(icon_geo.get("y")))
             self.assertLessEqual(int(icon_geo.get("y")) + int(icon_geo.get("height")),
@@ -110,13 +145,13 @@ class DrawioTests(unittest.TestCase):
                   if cell.get("id").startswith("group-")]
         positions = [cell.find("mxGeometry") for cell in ranges]
         self.assertEqual(len({geo.get("y") for geo in positions}), 1)
-        self.assertEqual(len({geo.get("x") for geo in positions}), 3)
+        self.assertEqual(len(positions), 1)  # All unmatched private hosts share Unknown VLAN.
         inventory_geo = inventory.find("mxGeometry")
         self.assertGreater(int(inventory_geo.get("width")), int(inventory_geo.get("height")))
         for edge in document.findall(".//mxCell[@edge='1']"):
             self.assertIn("exitX=1;exitY=0.5;entryX=0;entryY=0.5", edge.get("style"))
 
-    def test_nested_subnets_and_single_multihomed_node(self) -> None:
+    def test_flat_groups_and_single_multihomed_node(self) -> None:
         self.write_csv([
             ["127.0.0.1/8, 172.20.0.10/16", "broad", "Linux"],
             ["172.20.0.20/24, 10.0.0.2/24", "multi", "Linux"],
@@ -127,14 +162,12 @@ class DrawioTests(unittest.TestCase):
         cells = document.findall(".//mxCell[@vertex='1']")
         groups = {cell.get("value"): cell for cell in cells
                   if cell.get("id", "").startswith("group-")}
-        broad = groups["172.20.0.0/16"]
-        narrow = groups["172.20.0.0/24"]
-        self.assertEqual(broad.get("parent"), groups["172.16.0.0/12"].get("id"))
-        self.assertEqual(narrow.get("parent"), broad.get("id"))
+        self.assertNotIn("172.20.0.0/16", groups)
+        self.assertNotIn("172.20.0.0/24", groups)
         hosts = [cell for cell in cells if cell.get("id", "").startswith("host-")]
         self.assertEqual(len(hosts), 3)
         multi = next(cell for cell in hosts if cell.get("value", "").startswith("multi\n"))
-        self.assertEqual(multi.get("parent"), narrow.get("id"))
+        self.assertEqual(multi.get("parent"), groups["Unknown VLAN"].get("id"))
         self.assertIn("10.0.0.2/24", multi.get("value"))
         self.assertNotIn("127.0.0.0/8", groups)
 
@@ -166,8 +199,8 @@ class DrawioTests(unittest.TestCase):
                   if cell.get("id", "").startswith("group-")}
         for hostname, group in (("local", "Unassigned / local-only addresses"),
                                 ("invalid", "Unassigned / local-only addresses"),
-                                ("ipv6", "2001:db8::/64"), ("public", "8.8.8.8/32"),
-                                ("private-preferred", "10.5.0.0/24")):
+                                ("ipv6", "Other IPv6"), ("public", "Other IPv4"),
+                                ("private-preferred", "Unknown VLAN")):
             with self.subTest(hostname=hostname):
                 host = next(cell for cell in cells if cell.get("value", "").startswith(hostname + "\n"))
                 self.assertEqual(host.get("parent"), groups[group])
@@ -200,3 +233,32 @@ class DrawioTests(unittest.TestCase):
             self.assertEqual(main(["--csv", str(self.source)]), 0)
         self.assertIn("Wrote 1 nodes", output.getvalue())
         self.assertTrue(self.destination.exists())
+
+    def test_vlan_grouping_preserves_multihomed_hosts_and_prefixes(self) -> None:
+        self.write_csv([
+            ["10.0.10.1/16, 10.0.20.2/24", "multi", "Linux"],
+            ["10.0.10.2", "bare", "Linux"],
+            ["10.0.20.3/24", "other-vlan", "Linux"],
+            ["10.1.10.1/24", "outside", "Linux"],
+        ])
+        export_drawio(self.source, self.destination, build_rules(["10.0.0.0/16"], []))
+        cells = ET.parse(self.destination).findall(".//mxCell")
+        by_id = {cell.get("id"): cell for cell in cells}
+        hosts = [cell for cell in cells if cell.get("id", "").startswith("host-")]
+        self.assertEqual(len(hosts), 4)
+        for host, vlan in zip(hosts, [10, 10, 20, None]):
+            parent = by_id[host.get("parent")]
+            self.assertEqual(parent.get("value"), f"VLAN {vlan} (configured/inferred)" if vlan else "Unknown VLAN")
+        self.assertIn("10.0.20.2/24", hosts[0].get("value"))
+        self.assertIn("10.0.10.1/16", hosts[0].get("value"))
+        self.assertIn("10.0.10.2", hosts[1].get("value"))
+        for host in hosts:
+            self.assertNotIn("VLAN", host.get("value"))
+
+    def test_cli_manual_vlan_rules(self) -> None:
+        self.write_csv([["172.20.30.1/24", "manual", "Linux"]])
+        with redirect_stdout(io.StringIO()):
+            main(["--csv", str(self.source), "--vlan-range", "172.20.0.0/16",
+                  "--vlan-map", "172.20.30.0/24=300"])
+        labels = [cell.get("value") for cell in ET.parse(self.destination).findall(".//mxCell")]
+        self.assertIn("VLAN 300 (configured/inferred)", labels)

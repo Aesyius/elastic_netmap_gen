@@ -1,0 +1,122 @@
+[
+  {
+    "scenario": "large_01",
+    "seed": 20261030,
+    "devices": 239,
+    "kct": 103,
+    "vlans": 5,
+    "routers": 4,
+    "firewalls": 3,
+    "switches": 3,
+    "servers": 68,
+    "connections": 12
+  },
+  {
+    "scenario": "large_02",
+    "seed": 20261031,
+    "devices": 178,
+    "kct": 64,
+    "vlans": 5,
+    "routers": 3,
+    "firewalls": 3,
+    "switches": 3,
+    "servers": 29,
+    "connections": 12
+  },
+  {
+    "scenario": "large_03",
+    "seed": 20261032,
+    "devices": 153,
+    "kct": 62,
+    "vlans": 4,
+    "routers": 4,
+    "firewalls": 2,
+    "switches": 3,
+    "servers": 70,
+    "connections": 11
+  },
+  {
+    "scenario": "large_04",
+    "seed": 20261033,
+    "devices": 180,
+    "kct": 94,
+    "vlans": 8,
+    "routers": 4,
+    "firewalls": 1,
+    "switches": 8,
+    "servers": 57,
+    "connections": 9
+  },
+  {
+    "scenario": "large_05",
+    "seed": 20261034,
+    "devices": 123,
+    "kct": 44,
+    "vlans": 8,
+    "routers": 4,
+    "firewalls": 1,
+    "switches": 7,
+    "servers": 38,
+    "connections": 9
+  },
+  {
+    "scenario": "large_06",
+    "seed": 20261035,
+    "devices": 194,
+    "kct": 73,
+    "vlans": 5,
+    "routers": 3,
+    "firewalls": 3,
+    "switches": 8,
+    "servers": 94,
+    "connections": 9
+  },
+  {
+    "scenario": "large_07",
+    "seed": 20261036,
+    "devices": 142,
+    "kct": 48,
+    "vlans": 7,
+    "routers": 5,
+    "firewalls": 1,
+    "switches": 6,
+    "servers": 44,
+    "connections": 10
+  },
+  {
+    "scenario": "large_08",
+    "seed": 20261037,
+    "devices": 226,
+    "kct": 109,
+    "vlans": 4,
+    "routers": 4,
+    "firewalls": 1,
+    "switches": 8,
+    "servers": 58,
+    "connections": 9
+  },
+  {
+    "scenario": "large_09",
+    "seed": 20261038,
+    "devices": 165,
+    "kct": 67,
+    "vlans": 5,
+    "routers": 4,
+    "firewalls": 2,
+    "switches": 6,
+    "servers": 31,
+    "connections": 12
+  },
+  {
+    "scenario": "large_10",
+    "seed": 20261039,
+    "devices": 142,
+    "kct": 70,
+    "vlans": 6,
+    "routers": 3,
+    "firewalls": 2,
+    "switches": 3,
+    "servers": 44,
+    "connections": 10
+  }
+]

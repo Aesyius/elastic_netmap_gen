@@ -4,7 +4,7 @@ import io
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
 
-from tyler_netmap.cli import identify_internal_subnet, main
+from elastic_netmap_gen.cli import identify_internal_subnet, main
 
 
 class CliTests(unittest.TestCase):
@@ -13,7 +13,7 @@ class CliTests(unittest.TestCase):
         with redirect_stdout(output):
             result = main([])
         self.assertEqual(result, 0)
-        self.assertEqual(output.getvalue(), "Tyler Netmap is ready.\n")
+        self.assertEqual(output.getvalue(), "Elastic Netmap Gen is ready.\n")
 
     def test_internal_subnets(self) -> None:
         for address, expected in (

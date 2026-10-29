@@ -6,6 +6,8 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from .drawio import export_drawio
+from .configuration import Configuration, load_configuration
+from .vlan import build_rules
 
 
 _OCTET = r"(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])"
@@ -32,22 +34,35 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Identify internal IPv4 ranges or export an agent CSV to draw.io.")
     parser.add_argument("address", nargs="?", help="IPv4 address to classify")
     parser.add_argument("--csv", type=Path, help="Agent inventory CSV to export")
+    parser.add_argument("--config", type=Path, help="Configuration JSON containing VLAN declarations and device settings")
     parser.add_argument("--output", type=Path, help="Output .drawio file (default: CSV filename with .drawio extension)")
+    parser.add_argument("--vlan-range", action="append", default=[], metavar="CIDR",
+                        help="Add an IPv4 range using third-octet VLAN IDs (repeatable; no default ranges)")
+    parser.add_argument("--vlan-map", action="append", default=[], metavar="CIDR=ID",
+                        help="Assign an explicit VLAN ID to a subnet (repeatable; most specific range wins)")
     args = parser.parse_args(argv)
     if args.csv is not None:
         if args.address is not None:
             parser.error("Use either an IPv4 address or --csv, not both")
         destination = args.output if args.output is not None else args.csv.with_suffix(".drawio")
         try:
-            count = export_drawio(args.csv, destination)
+            if args.config is not None and args.config.resolve() == destination.resolve():
+                raise ValueError("Configuration and output diagram must be different files")
+            config = load_configuration(args.config) if args.config is not None else Configuration()
+            rules = build_rules(args.vlan_range, args.vlan_map, config.vlan_rules)
+            count = export_drawio(args.csv, destination, rules, config.devices, config.connections)
         except (OSError, ValueError) as error:
             parser.error(str(error))
         print(f"Wrote {count} nodes to {destination}")
         return 0
     if args.output is not None:
         parser.error("--output requires --csv")
+    if args.config is not None:
+        parser.error("--config requires --csv")
+    if args.vlan_range or args.vlan_map:
+        parser.error("--vlan-range and --vlan-map require --csv")
     if args.address is None:
-        print("Tyler Netmap is ready.")
+        print("Elastic Netmap Gen is ready.")
         return 0
     try:
         subnet = identify_internal_subnet(args.address)

@@ -1,0 +1,981 @@
+{
+  "vlans": [
+    {
+      "range": "10.1.197.0/24",
+      "vlan_id": 48
+    },
+    {
+      "range": "10.1.213.0/24",
+      "vlan_id": 351
+    },
+    {
+      "range": "10.1.142.0/24",
+      "vlan_id": 431
+    },
+    {
+      "range": "10.1.161.0/24",
+      "vlan_id": 583
+    },
+    {
+      "range": "10.1.77.0/24",
+      "vlan_id": 896
+    }
+  ],
+  "devices": {
+    "large-01-pc-001": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-002": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-01-server-003": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL"
+    },
+    "large-01-pc-004": {
+      "type": "pc"
+    },
+    "large-01-server-005": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-01-pc-006": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-switch-007": {
+      "type": "switch"
+    },
+    "large-01-pc-008": {
+      "type": "pc"
+    },
+    "large-01-server-009": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-01-pc-010": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-011": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-01-pc-012": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-013": {
+      "type": "pc"
+    },
+    "large-01-pc-014": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-015": {
+      "type": "pc"
+    },
+    "large-01-switch-016": {
+      "type": "switch"
+    },
+    "large-01-pc-017": {
+      "type": "pc"
+    },
+    "large-01-pc-018": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-019": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-020": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-021": {
+      "type": "pc"
+    },
+    "large-01-pc-022": {
+      "type": "pc"
+    },
+    "large-01-pc-023": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-024": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-025": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-01-firewall-026": {
+      "type": "firewall"
+    },
+    "large-01-pc-027": {
+      "type": "pc"
+    },
+    "large-01-pc-028": {
+      "type": "pc"
+    },
+    "large-01-pc-029": {
+      "type": "pc"
+    },
+    "large-01-pc-030": {
+      "type": "pc"
+    },
+    "large-01-pc-031": {
+      "type": "pc"
+    },
+    "large-01-pc-032": {
+      "type": "pc"
+    },
+    "large-01-server-033": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-server-034": {
+      "type": "server",
+      "server_type": "Application",
+      "kct": true
+    },
+    "large-01-pc-035": {
+      "type": "pc"
+    },
+    "large-01-pc-036": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-037": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-038": {
+      "type": "pc"
+    },
+    "large-01-pc-039": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-040": {
+      "type": "server",
+      "server_type": "Exchange",
+      "kct": true
+    },
+    "large-01-server-041": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-01-server-042": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-pc-043": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-044": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-firewall-045": {
+      "type": "firewall"
+    },
+    "large-01-pc-046": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-047": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-048": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-01-pc-049": {
+      "type": "pc"
+    },
+    "large-01-pc-050": {
+      "type": "pc"
+    },
+    "large-01-server-051": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-01-pc-052": {
+      "type": "pc"
+    },
+    "large-01-pc-053": {
+      "type": "pc"
+    },
+    "large-01-pc-054": {
+      "type": "pc"
+    },
+    "large-01-pc-055": {
+      "type": "pc"
+    },
+    "large-01-server-056": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-server-057": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-01-pc-058": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-059": {
+      "type": "pc"
+    },
+    "large-01-pc-060": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-061": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-062": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-063": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-064": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-065": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-066": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-pc-067": {
+      "type": "pc"
+    },
+    "large-01-server-068": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-01-pc-069": {
+      "type": "pc"
+    },
+    "large-01-pc-070": {
+      "type": "pc"
+    },
+    "large-01-server-071": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-01-pc-072": {
+      "type": "pc"
+    },
+    "large-01-server-073": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-server-074": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-01-pc-075": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-076": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-077": {
+      "type": "pc"
+    },
+    "large-01-pc-078": {
+      "type": "pc"
+    },
+    "large-01-switch-079": {
+      "type": "switch",
+      "kct": true
+    },
+    "large-01-pc-080": {
+      "type": "pc"
+    },
+    "large-01-pc-081": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-082": {
+      "type": "pc"
+    },
+    "large-01-pc-083": {
+      "type": "pc"
+    },
+    "large-01-pc-084": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-085": {
+      "type": "pc"
+    },
+    "large-01-pc-086": {
+      "type": "pc"
+    },
+    "large-01-pc-087": {
+      "type": "pc"
+    },
+    "large-01-router-088": {
+      "type": "router",
+      "vlans": [
+        48,
+        351,
+        431,
+        583,
+        896
+      ]
+    },
+    "large-01-pc-089": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-090": {
+      "type": "pc"
+    },
+    "large-01-pc-091": {
+      "type": "pc"
+    },
+    "large-01-pc-092": {
+      "type": "pc"
+    },
+    "large-01-pc-093": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-094": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-01-server-095": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-01-pc-096": {
+      "type": "pc"
+    },
+    "large-01-pc-097": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-098": {
+      "type": "server",
+      "server_type": "Application",
+      "kct": true
+    },
+    "large-01-server-099": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-01-pc-100": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-101": {
+      "type": "pc"
+    },
+    "large-01-pc-102": {
+      "type": "pc"
+    },
+    "large-01-server-103": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-pc-104": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-router-105": {
+      "type": "router",
+      "kct": true,
+      "vlans": [
+        583
+      ]
+    },
+    "large-01-server-106": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-01-server-107": {
+      "type": "server",
+      "server_type": "Application",
+      "kct": true
+    },
+    "large-01-pc-108": {
+      "type": "pc"
+    },
+    "large-01-server-109": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-01-pc-110": {
+      "type": "pc"
+    },
+    "large-01-pc-111": {
+      "type": "pc"
+    },
+    "large-01-pc-112": {
+      "type": "pc"
+    },
+    "large-01-pc-113": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-114": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-115": {
+      "type": "pc"
+    },
+    "large-01-server-116": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-01-server-117": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-01-pc-118": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-119": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-120": {
+      "type": "pc"
+    },
+    "large-01-pc-121": {
+      "type": "pc"
+    },
+    "large-01-pc-122": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-123": {
+      "type": "pc"
+    },
+    "large-01-pc-124": {
+      "type": "pc"
+    },
+    "large-01-server-125": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL"
+    },
+    "large-01-pc-126": {
+      "type": "pc"
+    },
+    "large-01-pc-127": {
+      "type": "pc"
+    },
+    "large-01-pc-128": {
+      "type": "pc"
+    },
+    "large-01-pc-129": {
+      "type": "pc"
+    },
+    "large-01-server-130": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-01-server-131": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-01-pc-132": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-133": {
+      "type": "pc"
+    },
+    "large-01-server-134": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL"
+    },
+    "large-01-pc-135": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-136": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-137": {
+      "type": "pc"
+    },
+    "large-01-server-138": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-01-pc-139": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-140": {
+      "type": "pc"
+    },
+    "large-01-server-141": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-pc-142": {
+      "type": "pc"
+    },
+    "large-01-pc-143": {
+      "type": "pc"
+    },
+    "large-01-router-144": {
+      "type": "router",
+      "kct": true,
+      "vlans": [
+        48,
+        351
+      ]
+    },
+    "large-01-pc-145": {
+      "type": "pc"
+    },
+    "large-01-server-146": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-01-pc-147": {
+      "type": "pc"
+    },
+    "large-01-pc-148": {
+      "type": "pc"
+    },
+    "large-01-pc-149": {
+      "type": "pc"
+    },
+    "large-01-server-150": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-01-server-151": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-01-pc-152": {
+      "type": "pc"
+    },
+    "large-01-pc-153": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-154": {
+      "type": "pc"
+    },
+    "large-01-server-155": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-01-pc-156": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-157": {
+      "type": "pc"
+    },
+    "large-01-pc-158": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-159": {
+      "type": "pc"
+    },
+    "large-01-pc-160": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-161": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-01-pc-162": {
+      "type": "pc"
+    },
+    "large-01-server-163": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-server-164": {
+      "type": "server",
+      "server_type": "Application",
+      "kct": true
+    },
+    "large-01-pc-165": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-166": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-server-167": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-pc-168": {
+      "type": "pc"
+    },
+    "large-01-pc-169": {
+      "type": "pc"
+    },
+    "large-01-server-170": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-01-server-171": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-01-pc-172": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-173": {
+      "type": "pc"
+    },
+    "large-01-pc-174": {
+      "type": "pc"
+    },
+    "large-01-pc-175": {
+      "type": "pc"
+    },
+    "large-01-pc-176": {
+      "type": "pc"
+    },
+    "large-01-pc-177": {
+      "type": "pc"
+    },
+    "large-01-pc-178": {
+      "type": "pc"
+    },
+    "large-01-server-179": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-01-pc-180": {
+      "type": "pc"
+    },
+    "large-01-server-181": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-01-pc-182": {
+      "type": "pc"
+    },
+    "large-01-pc-183": {
+      "type": "pc"
+    },
+    "large-01-pc-184": {
+      "type": "pc"
+    },
+    "large-01-pc-185": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-186": {
+      "type": "pc"
+    },
+    "large-01-server-187": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-01-pc-188": {
+      "type": "pc"
+    },
+    "large-01-server-189": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-pc-190": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-191": {
+      "type": "pc"
+    },
+    "large-01-pc-192": {
+      "type": "pc"
+    },
+    "large-01-server-193": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-01-pc-194": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-195": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-01-pc-196": {
+      "type": "pc"
+    },
+    "large-01-pc-197": {
+      "type": "pc"
+    },
+    "large-01-server-198": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-01-pc-199": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-200": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-01-server-201": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-01-pc-202": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-firewall-203": {
+      "type": "firewall"
+    },
+    "large-01-pc-204": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-205": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-206": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-01-pc-207": {
+      "type": "pc"
+    },
+    "large-01-pc-208": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-209": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-210": {
+      "type": "pc"
+    },
+    "large-01-pc-211": {
+      "type": "pc"
+    },
+    "large-01-server-212": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-01-server-213": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-01-pc-214": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-215": {
+      "type": "server",
+      "server_type": "Application",
+      "kct": true
+    },
+    "large-01-pc-216": {
+      "type": "pc"
+    },
+    "large-01-pc-217": {
+      "type": "pc"
+    },
+    "large-01-pc-218": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-219": {
+      "type": "pc"
+    },
+    "large-01-pc-220": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-221": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-01-server-222": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL"
+    },
+    "large-01-pc-223": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-224": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-225": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-226": {
+      "type": "pc"
+    },
+    "large-01-pc-227": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-228": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-pc-229": {
+      "type": "pc"
+    },
+    "large-01-pc-230": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-231": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-01-router-232": {
+      "type": "router",
+      "vlans": [
+        431
+      ]
+    },
+    "large-01-server-233": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-01-server-234": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-01-server-235": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-01-pc-236": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-237": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-01-pc-238": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-01-server-239": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    }
+  },
+  "connections": [
+    {
+      "from": "large-01-firewall-203",
+      "to": "large-01-router-105"
+    },
+    {
+      "from": "large-01-router-088",
+      "to": "large-01-router-144"
+    },
+    {
+      "from": "large-01-router-144",
+      "to": "large-01-switch-016"
+    },
+    {
+      "from": "large-01-router-088",
+      "to": "large-01-server-116"
+    },
+    {
+      "from": "large-01-switch-016",
+      "to": "large-01-server-189"
+    },
+    {
+      "from": "internet",
+      "to": "large-01-firewall-026"
+    },
+    {
+      "from": "large-01-firewall-045",
+      "to": "large-01-router-088"
+    },
+    {
+      "from": "large-01-router-144",
+      "to": "large-01-switch-007"
+    },
+    {
+      "from": "large-01-router-088",
+      "to": "large-01-router-232"
+    },
+    {
+      "from": "large-01-firewall-045",
+      "to": "large-01-firewall-203"
+    },
+    {
+      "from": "large-01-switch-016",
+      "to": "large-01-server-198"
+    },
+    {
+      "from": "internet",
+      "to": "large-01-firewall-045"
+    }
+  ]
+}

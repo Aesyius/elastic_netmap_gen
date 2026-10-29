@@ -1,0 +1,551 @@
+{
+  "vlans": [
+    {
+      "range": "10.5.97.0/24",
+      "vlan_id": 205
+    },
+    {
+      "range": "10.5.219.0/24",
+      "vlan_id": 240
+    },
+    {
+      "range": "10.5.148.0/24",
+      "vlan_id": 254
+    },
+    {
+      "range": "10.5.145.0/24",
+      "vlan_id": 305
+    },
+    {
+      "range": "10.5.15.0/24",
+      "vlan_id": 387
+    },
+    {
+      "range": "10.5.213.0/24",
+      "vlan_id": 718
+    },
+    {
+      "range": "10.5.217.0/24",
+      "vlan_id": 922
+    },
+    {
+      "range": "10.5.116.0/24",
+      "vlan_id": 990
+    }
+  ],
+  "devices": {
+    "large-05-pc-001": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-002": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-05-server-003": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-05-pc-004": {
+      "type": "pc"
+    },
+    "large-05-server-005": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-05-pc-006": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-007": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-008": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-009": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-05-switch-010": {
+      "type": "switch",
+      "kct": true
+    },
+    "large-05-pc-011": {
+      "type": "pc"
+    },
+    "large-05-pc-012": {
+      "type": "pc"
+    },
+    "large-05-server-013": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-05-pc-014": {
+      "type": "pc"
+    },
+    "large-05-server-015": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-05-pc-016": {
+      "type": "pc"
+    },
+    "large-05-server-017": {
+      "type": "server",
+      "server_type": "Web",
+      "kct": true
+    },
+    "large-05-server-018": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-pc-019": {
+      "type": "pc"
+    },
+    "large-05-server-020": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-05-switch-021": {
+      "type": "switch"
+    },
+    "large-05-switch-022": {
+      "type": "switch",
+      "kct": true
+    },
+    "large-05-pc-023": {
+      "type": "pc"
+    },
+    "large-05-server-024": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-router-025": {
+      "type": "router",
+      "kct": true,
+      "vlans": [
+        240,
+        718
+      ]
+    },
+    "large-05-pc-026": {
+      "type": "pc"
+    },
+    "large-05-server-027": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-05-server-028": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-05-pc-029": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-030": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-firewall-031": {
+      "type": "firewall",
+      "kct": true
+    },
+    "large-05-pc-032": {
+      "type": "pc"
+    },
+    "large-05-pc-033": {
+      "type": "pc"
+    },
+    "large-05-pc-034": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-035": {
+      "type": "pc"
+    },
+    "large-05-pc-036": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-037": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-05-pc-038": {
+      "type": "pc"
+    },
+    "large-05-pc-039": {
+      "type": "pc"
+    },
+    "large-05-pc-040": {
+      "type": "pc"
+    },
+    "large-05-router-041": {
+      "type": "router",
+      "vlans": [
+        240,
+        254,
+        387,
+        718
+      ]
+    },
+    "large-05-server-042": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-05-server-043": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-05-server-044": {
+      "type": "server",
+      "server_type": "Monitoring"
+    },
+    "large-05-pc-045": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-046": {
+      "type": "pc"
+    },
+    "large-05-server-047": {
+      "type": "server",
+      "server_type": "File"
+    },
+    "large-05-pc-048": {
+      "type": "pc"
+    },
+    "large-05-switch-049": {
+      "type": "switch"
+    },
+    "large-05-server-050": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-05-pc-051": {
+      "type": "pc"
+    },
+    "large-05-pc-052": {
+      "type": "pc"
+    },
+    "large-05-pc-053": {
+      "type": "pc"
+    },
+    "large-05-server-054": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-05-pc-055": {
+      "type": "pc"
+    },
+    "large-05-server-056": {
+      "type": "server",
+      "server_type": "DNS"
+    },
+    "large-05-pc-057": {
+      "type": "pc"
+    },
+    "large-05-pc-058": {
+      "type": "pc"
+    },
+    "large-05-server-059": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-pc-060": {
+      "type": "pc"
+    },
+    "large-05-server-061": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-05-pc-062": {
+      "type": "pc"
+    },
+    "large-05-router-063": {
+      "type": "router",
+      "vlans": [
+        205,
+        305,
+        387,
+        718,
+        922,
+        990
+      ]
+    },
+    "large-05-pc-064": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-065": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-066": {
+      "type": "pc"
+    },
+    "large-05-pc-067": {
+      "type": "pc"
+    },
+    "large-05-pc-068": {
+      "type": "pc"
+    },
+    "large-05-pc-069": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-070": {
+      "type": "pc"
+    },
+    "large-05-router-071": {
+      "type": "router",
+      "vlans": [
+        205,
+        305,
+        922,
+        990
+      ]
+    },
+    "large-05-pc-072": {
+      "type": "pc"
+    },
+    "large-05-pc-073": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-074": {
+      "type": "pc"
+    },
+    "large-05-pc-075": {
+      "type": "pc"
+    },
+    "large-05-pc-076": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-077": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-078": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-079": {
+      "type": "pc"
+    },
+    "large-05-pc-080": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-081": {
+      "type": "pc"
+    },
+    "large-05-switch-082": {
+      "type": "switch"
+    },
+    "large-05-pc-083": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-084": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-05-server-085": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-05-pc-086": {
+      "type": "pc"
+    },
+    "large-05-pc-087": {
+      "type": "pc"
+    },
+    "large-05-server-088": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-pc-089": {
+      "type": "pc"
+    },
+    "large-05-server-090": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-05-pc-091": {
+      "type": "pc"
+    },
+    "large-05-pc-092": {
+      "type": "pc"
+    },
+    "large-05-server-093": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-05-server-094": {
+      "type": "server",
+      "server_type": "Database / PostgreSQL",
+      "kct": true
+    },
+    "large-05-pc-095": {
+      "type": "pc"
+    },
+    "large-05-pc-096": {
+      "type": "pc"
+    },
+    "large-05-pc-097": {
+      "type": "pc"
+    },
+    "large-05-server-098": {
+      "type": "server",
+      "server_type": "Backup",
+      "kct": true
+    },
+    "large-05-pc-099": {
+      "type": "pc"
+    },
+    "large-05-switch-100": {
+      "type": "switch"
+    },
+    "large-05-pc-101": {
+      "type": "pc"
+    },
+    "large-05-server-102": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-pc-103": {
+      "type": "pc"
+    },
+    "large-05-pc-104": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-105": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-106": {
+      "type": "server",
+      "server_type": "File",
+      "kct": true
+    },
+    "large-05-pc-107": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-server-108": {
+      "type": "server",
+      "server_type": "Exchange"
+    },
+    "large-05-pc-109": {
+      "type": "pc"
+    },
+    "large-05-server-110": {
+      "type": "server",
+      "server_type": "Web"
+    },
+    "large-05-pc-111": {
+      "type": "pc",
+      "kct": true
+    },
+    "large-05-pc-112": {
+      "type": "pc"
+    },
+    "large-05-switch-113": {
+      "type": "switch"
+    },
+    "large-05-pc-114": {
+      "type": "pc"
+    },
+    "large-05-server-115": {
+      "type": "server",
+      "server_type": "Application"
+    },
+    "large-05-pc-116": {
+      "type": "pc"
+    },
+    "large-05-server-117": {
+      "type": "server",
+      "server_type": "Backup"
+    },
+    "large-05-server-118": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-05-server-119": {
+      "type": "server",
+      "server_type": "Monitoring",
+      "kct": true
+    },
+    "large-05-pc-120": {
+      "type": "pc"
+    },
+    "large-05-pc-121": {
+      "type": "pc"
+    },
+    "large-05-server-122": {
+      "type": "server",
+      "server_type": "DNS",
+      "kct": true
+    },
+    "large-05-pc-123": {
+      "type": "pc"
+    }
+  },
+  "connections": [
+    {
+      "from": "large-05-router-041",
+      "to": "large-05-switch-113"
+    },
+    {
+      "from": "large-05-firewall-031",
+      "to": "large-05-router-041"
+    },
+    {
+      "from": "large-05-switch-010",
+      "to": "large-05-server-009"
+    },
+    {
+      "from": "large-05-switch-113",
+      "to": "large-05-server-050"
+    },
+    {
+      "from": "large-05-router-041",
+      "to": "large-05-switch-010"
+    },
+    {
+      "from": "large-05-router-041",
+      "to": "large-05-router-063"
+    },
+    {
+      "from": "large-05-firewall-031",
+      "to": "large-05-router-025"
+    },
+    {
+      "from": "large-05-router-041",
+      "to": "large-05-router-071"
+    },
+    {
+      "from": "internet",
+      "to": "large-05-firewall-031"
+    }
+  ]
+}
